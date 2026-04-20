@@ -1,0 +1,77 @@
+/* styles.css */
+:root {
+    --primary: #1a73e8; /* Google Blue */
+    --bg: #0b0e14;
+    --card: #161b22;
+    --text: #e6edf3;
+    --success: #238636;
+    --danger: #da3633;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    background: linear-gradient(180deg, #1a73e822 0%, #0b0e14 100%);
+    border-bottom: 1px solid #30363d;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    background: #30363d;
+}
+
+.progress-bg {
+    background: #30363d;
+    height: 12px;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s;
+}
+
+h1, h2, h3 { margin: 0.5rem 0; }
+p { color: #8b949e; line-height: 1.5; }
+
+/* AI Advice Card specific styling */
+#ai-advice {
+    border-left: 4px solid var(--primary);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VenueIQ | Smart Infrastructure Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://www.gstatic.com">
+</head>
+<body>
+    <header role="banner">
+        <h1 class="logo">⚡ VenueIQ</h1>
+        <p>AI-Powered Venue Intelligence Assistant</p>
+    </header>
+
+    <main class="container" id="main-content">
+        <section class="card" aria-labelledby="status-header">
+            <header class="card-header">
+                <div id="traffic-pill" class="badge" aria-live="assertive">INITIALIZING...</div>
+                <h2 id="status-header">Live Gate Telemetry</h2>
+            </header>
+            
+            <div class="progress-bg" 
+                 role="progressbar" 
+                 aria-valuemin="0" 
+                 aria-valuemax="100" 
+                 id="progress-parent"
+                 aria-label="Crowd density at Gate Alpha">
+                <div id="progress-bar"></div>
+            </div>
+            
+            <p class="stats">Density: <strong id="density-val" aria-atomic="true">0</strong>%</p>
+        </section>
+
+        <section class="card ai-card" aria-labelledby="ai-header">
+            <h3 id="ai-header">🤖 Assistant Insights</h3>
+            <div id="advice-container" aria-live="polite">
+                <p id="advice-text">Analyzing real-time Google Firebase stream...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>Enterprise Grade Data Sync via Google Firebase</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
