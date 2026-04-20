@@ -3,9 +3,17 @@ import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/fireb
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 // 1. Enhanced Config
-const firebaseConfig = { 
-    databaseURL: "https://sawad-d0b58-default-rtdb.firebaseio.com" 
+const firebaseConfig = {
+    apiKey: "AIzaSyCTpPT6exZmuSwQN1HaHvj31MIBicgdg5c",
+    authDomain: "sawad-d0b58.firebaseapp.com",
+    projectId: "sawad-d0b58",
+    storageBucket: "sawad-d0b58.firebasestorage.app",
+    messagingSenderId: "828258553295",
+    appId: "1:828258553295:web:1fe7b3608dce947f1256ba",
+    measurementId: "G-F6Z2HF81ZP"
   };
+
+
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth(app); // Initializing Google Auth Service
